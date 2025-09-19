@@ -1,0 +1,203 @@
+# EEST14 - Sistema de Gestión Escolar
+
+## 📋 Resumen del Proyecto
+
+Sistema web completo para la gestión de comunicados, proyectos y preinscripciones de la Escuela de Educación Secundaria Técnica N°14 de González Catán.
+
+## 🚀 Funcionalidades Implementadas
+
+### 1. Sistema de Comunicados
+- **Publicación de comunicados** con numeración automática (formato: número/año)
+- **Gestión completa** (crear, editar, eliminar) para administradores y directores
+- **Búsqueda avanzada** por título, descripción o número de comunicado
+- **Sistema de importancia** (urgente, normal, informativo)
+- **Comunicados destacados** con marcado especial
+- **Subida de imágenes** opcionales con fallback a logo institucional
+
+### 2. Sistema de Proyectos
+- **Categorización** en: capacidades, precapacidades, saberes, destacados, expo-técnica
+- **Páginas individuales** para cada categoría
+- **Gestión completa** de proyectos (CRUD)
+- **Sistema de destacados** para proyectos especiales
+- **Página de Expotécnica** que muestra todos los proyectos juntos
+
+### 3. Sistema de Preinscripciones
+- **Formulario de preinscripción** completo
+- **Sistema de sorteo** para seleccionar estudiantes
+- **Gestión de estados** (pendiente, seleccionado, inscrito)
+- **Panel de administración** para realizar sorteos
+
+### 4. Sistema de Usuarios y Permisos
+- **Tipos de usuario**: usuario, admin, director
+- **Control de acceso** basado en roles
+- **Sesiones seguras** con verificación de permisos
+
+## 🛠️ Cambios Técnicos Implementados
+
+### Base de Datos
+```sql
+-- Nuevas columnas en tabla comunicado
+ALTER TABLE comunicado ADD COLUMN numero_comunicado INT;
+ALTER TABLE comunicado ADD COLUMN año YEAR;
+ALTER TABLE comunicado ADD COLUMN destacado TINYINT(1) DEFAULT 0;
+
+-- Nueva tabla proyectos
+CREATE TABLE proyectos (
+    Id INT(11) NOT NULL AUTO_INCREMENT,
+    titulo VARCHAR(200) NOT NULL,
+    descripcion TEXT,
+    categoria ENUM('capacidades','precapacidades','saberes','destacados','expo-tecnica') NOT NULL,
+    imagen VARCHAR(255),
+    fecha_creacion DATE NOT NULL,
+    destacado TINYINT(1) DEFAULT 0,
+    activo TINYINT(1) DEFAULT 1,
+    PRIMARY KEY (Id)
+);
+
+-- Modificación tabla usuarios
+ALTER TABLE usuarios ADD COLUMN tipo ENUM('usuario','admin','director') DEFAULT 'usuario';
+UPDATE usuarios SET tipo = 'director' WHERE usuario = 'Director';
+```
+
+### Archivos Creados
+- `public/admin_panel.php` - Panel de administración principal
+- `public/editar_comunicados.php` - Gestión de comunicados (CRUD)
+- `public/publicar_comunicado.php` - Formulario para publicar comunicados
+- `public/gestionar_proyectos.php` - Gestión de proyectos
+- `public/gestionar_preinscripciones.php` - Gestión de preinscripciones
+- `public/capacidades.php` - Página de proyectos de capacidades
+- `public/precapacidades.php` - Página de pre-capacidades
+- `public/saberes.php` - Página de saberes
+- `public/destacados.php` - Página de proyectos destacados
+- `public/expo_tecnica.php` - Página de Expotécnica
+- `public/assets/css/admin.css` - Estilos para panel de administración
+- `public/assets/css/comunicados.css` - Estilos para página de comunicados
+
+### Archivos Modificados
+- `public/index.php` - Enlaces a nuevas páginas de proyectos
+- `public/login.php` - Sistema de roles y redirección
+- `public/comunicados.php` - Búsqueda avanzada y gestión
+- `database/eestn14.sql` - Estructura de base de datos actualizada
+
+## 🎨 Mejoras de Diseño
+
+### 1. Sistema de Iconos
+- **Reemplazo de emojis** por iconos SVG escalables
+- **Consistencia visual** en toda la aplicación
+- **Iconos semánticamente apropiados** para cada función
+
+### 2. CSS Moderno
+- **Diseño minimalista** para el buscador
+- **Efectos de hover** y transiciones suaves
+- **Responsive design** para móviles y tablets
+- **Gradientes y sombras** para elementos destacados
+
+### 3. Formularios Mejorados
+- **Validación de campos** obligatorios
+- **Subida de archivos** con restricciones de tipo y tamaño
+- **Feedback visual** para acciones del usuario
+- **Diseño profesional** con estilos modernos
+
+## 🔍 Funcionalidades de Búsqueda
+
+### Comunicados
+- **Búsqueda por texto**: Título y descripción
+- **Búsqueda por comunicado**: Formato "número/año" (ej: 1/2025)
+- **Filtros combinados**: Texto + número de comunicado
+- **Resultados en tiempo real** con contadores
+
+### Características del Buscador
+- **Diseño minimalista** con campos de texto simples
+- **Iconos SVG** para botones de búsqueda y limpieza
+- **Efectos visuales** sutiles sin distracciones
+- **Responsive** para todos los dispositivos
+
+## 👥 Sistema de Roles
+
+### Director
+- Acceso completo a todas las funciones
+- Gestión de comunicados y proyectos
+- Realización de sorteos de preinscripciones
+- Panel de administración completo
+
+### Administrador
+- Gestión de comunicados y proyectos
+- Acceso al panel de administración
+- Realización de sorteos
+
+### Usuario
+- Acceso a páginas públicas
+- Visualización de comunicados y proyectos
+- Formulario de preinscripción
+
+## 📱 Características Responsive
+
+- **Diseño adaptable** para móviles, tablets y desktop
+- **Navegación optimizada** para touch
+- **Formularios responsive** con campos apropiados
+- **Imágenes adaptativas** con fallbacks
+
+## 🔒 Seguridad
+
+- **Verificación de sesiones** en todas las páginas administrativas
+- **Validación de tipos de archivo** para subidas
+- **Prepared statements** para consultas SQL
+- **Sanitización de datos** de entrada
+- **Control de acceso** basado en roles
+
+## 🚀 Instalación y Configuración
+
+### Requisitos
+- PHP 7.4 o superior
+- MySQL 5.7 o superior
+- Servidor web (Apache/Nginx)
+
+### Instalación
+1. Clonar o descargar el proyecto
+2. Configurar la base de datos con el archivo `database/eestn14.sql`
+3. Configurar conexión en `src/config.php`
+4. Subir archivos al servidor web
+5. Configurar permisos de escritura para `assets/img/comunicados/`
+
+### Configuración de Base de Datos
+```sql
+-- Importar el archivo database/eestn14.sql
+-- Verificar que la tabla usuarios tenga el campo 'tipo'
+-- Asegurar que exista al menos un usuario director
+```
+
+## 📋 Lista de Tareas Completadas
+
+- ✅ Sistema de comunicados con numeración automática
+- ✅ Gestión completa de comunicados (CRUD)
+- ✅ Sistema de búsqueda avanzada
+- ✅ Categorización de proyectos
+- ✅ Páginas individuales para cada categoría
+- ✅ Sistema de preinscripciones y sorteos
+- ✅ Panel de administración
+- ✅ Sistema de roles y permisos
+- ✅ Reemplazo de emojis por SVG
+- ✅ CSS moderno y responsive
+- ✅ Formularios con validación
+- ✅ Gestión de imágenes con fallback
+- ✅ Búsqueda por formato de comunicado (1/2025)
+
+## 🎯 Próximas Mejoras Sugeridas
+
+- [ ] Sistema de notificaciones por email
+- [ ] Panel de estadísticas avanzadas
+- [ ] Exportación de datos a PDF/Excel
+- [ ] Sistema de comentarios en comunicados
+- [ ] Galería de imágenes para proyectos
+- [ ] Sistema de backup automático
+- [ ] Optimización de rendimiento
+- [ ] Integración con redes sociales
+
+## 📞 Soporte
+
+Para soporte técnico o consultas sobre el sistema, contactar al equipo de desarrollo.
+
+---
+
+**Desarrollado para E.E.S.T. N°14 - González Catán**  
+*Sistema de gestión escolar moderno y eficiente*
