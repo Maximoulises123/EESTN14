@@ -1,0 +1,116 @@
+/* Estilos para el panel de administración */
+
+.btn-admin {
+    background: linear-gradient(45deg, #e74c3c, #c0392b);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    margin: 2px;
+}
+
+.btn-admin:hover {
+    background: linear-gradient(45deg, #c0392b, #a93226);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn-logout {
+    background: linear-gradient(45deg, #95a5a6, #7f8c8d);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    margin: 2px;
+}
+
+.btn-logout:hover {
+    background: linear-gradient(45deg, #7f8c8d, #6c7b7d);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.admin-section {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.admin-section a {
+    margin: 0 10px;
+}
+
+.badge-destacado {
+    background: linear-gradient(45deg, #f39c12, #e67e22);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.7em;
+    font-weight: bold;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.badges {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.importancia-urgente {
+    background: #e74c3c;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.importancia-normal {
+    background: #3498db;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.importancia-informativo {
+    background: #27ae60;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .btn-admin, .btn-logout {
+        padding: 6px 12px;
+        font-size: 0.9em;
+    }
+    
+    .admin-section {
+        padding: 15px;
+    }
+    
+    .badges {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

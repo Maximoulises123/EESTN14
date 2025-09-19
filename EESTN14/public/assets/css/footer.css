@@ -1,0 +1,163 @@
+/* ===== FOOTER ===== */
+footer {
+    background-color: rgba(5, 1, 39, 1); /* Fondo azul oscuro personalizado */
+    color: rgba(201, 201, 201, 1); /* Color gris más claro para el texto */
+    font-family: Arial, sans-serif; /* Fuente consistente */
+    margin-top: auto; /* Empuja el footer hacia abajo */
+}
+
+/* Asegurar que el footer esté siempre en el fondo */
+body {
+    display: flex; /* Layout flexible */
+    flex-direction: column; /* Dirección vertical */
+    min-height: 100vh; /* Altura mínima de la ventana */
+}
+
+main {
+    flex: 1; /* Ocupa el espacio disponible */
+}
+
+/* Contenedor principal del footer */
+.footer-container {
+    max-width: 1200px; /* Ancho máximo */
+    margin: 0 auto; /* Centrado */
+    padding: 0 20px; /* Padding lateral */
+}
+
+/* Contenido principal del footer (4 columnas) */
+.footer-content {
+    display: grid; /* Layout de grid */
+    grid-template-columns: 2fr 1fr 1fr 1.5fr; /* Columna del mapa más ancha */
+    gap: 25px; /* Espacio entre columnas reducido */
+    padding: 30px 0 20px 0; /* Padding vertical reducido */
+    align-items: start; /* Alineación superior para mejor orden */
+}
+
+/* Estilos para cada columna */
+.footer-column {
+    display: flex; /* Layout flexible */
+    flex-direction: column; /* Dirección vertical */
+    height: 100%; /* Altura completa */
+}
+
+.footer-column h3 {
+    font-size: 16px; /* Tamaño del título reducido */
+    font-weight: bold; /* Negrita */
+    margin-bottom: 15px; /* Espacio debajo del título reducido */
+    color: rgba(201, 201, 201, 1); /* Color gris más claro */
+    flex-shrink: 0; /* No se reduce */
+}
+
+.footer-column p {
+    font-size: 13px; /* Tamaño del texto reducido */
+    line-height: 1.4; /* Interlineado más compacto */
+    margin-bottom: 15px; /* Espacio debajo del párrafo reducido */
+    color: rgba(201, 201, 201, 1); /* Color gris más claro */
+}
+
+/* Listas de enlaces */
+.footer-column ul {
+    list-style: none; /* Sin viñetas */
+    padding: 0; /* Sin padding */
+    margin: 0; /* Sin margen */
+}
+
+.footer-column ul li {
+    margin-bottom: 8px; /* Espacio entre elementos reducido */
+}
+
+.footer-column ul li a {
+    color: rgba(201, 201, 201, 1); /* Color gris más claro */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 13px; /* Tamaño del texto reducido */
+    transition: color 0.3s; /* Transición suave */
+}
+
+.footer-column ul li a:hover {
+    color: #fff; /* Color blanco al hover */
+}
+
+/* Información de contacto */
+.contact-info {
+    margin-top: 20px; /* Espacio superior */
+}
+
+.contact-item {
+    margin-bottom: 8px; /* Espacio entre elementos reducido */
+    font-size: 13px; /* Tamaño del texto reducido */
+    color: rgba(201, 201, 201, 1); /* Color gris más claro */
+}
+
+.contact-item a {
+    color: rgba(201, 201, 201, 1); /* Color gris más claro para enlaces */
+    text-decoration: none; /* Sin subrayado */
+    transition: color 0.3s; /* Transición suave */
+}
+
+.contact-item a:hover {
+    color: #fff; /* Color blanco al hover */
+    text-decoration: underline; /* Subrayado al hover */
+}
+
+/* Contenedor del mapa */
+.map-container {
+    border-radius: 8px; /* Esquinas redondeadas */
+    overflow: hidden; /* Oculta bordes del iframe */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Sombra más definida */
+    background-color: #f8f9fa; /* Fondo gris claro para el contenedor */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Borde sutil */
+    width: 100%; /* Ancho completo */
+    aspect-ratio: 1.5; /* Forma rectangular más ancha que alta */
+}
+
+.map-container iframe {
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa del contenedor */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Esquinas redondeadas */
+    display: block; /* Elemento de bloque */
+}
+
+/* Separador del footer */
+.footer-separator {
+    height: 1px; /* Altura de la línea */
+    background-color: rgba(255, 255, 255, 0.3); /* Línea sutil */
+    margin: 20px 0; /* Margen vertical */
+}
+
+/* Contenido inferior del footer */
+.footer-bottom {
+    padding: 20px 0; /* Padding vertical */
+    text-align: left; /* Texto alineado a la izquierda */
+}
+
+.footer-bottom p {
+    margin: 0; /* Sin margen */
+    color: rgba(201, 201, 201, 1); /* Color gris más claro */
+    font-size: 14px; /* Tamaño del texto */
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+        gap: 30px; /* Espacio entre columnas */
+        padding: 30px 0 20px 0; /* Menos padding */
+        align-items: stretch; /* Estirar columnas en móviles */
+    }
+    
+    .footer-column {
+        height: auto; /* Altura automática en móviles */
+    }
+    
+    .map-container {
+        margin-top: 15px; /* Espacio superior en móviles */
+        order: -1; /* Mapa al final en móviles */
+    }
+    
+    .map-container {
+        aspect-ratio: 1.2; /* Forma rectangular en móviles */
+        max-width: 300px; /* Ancho máximo en móviles */
+        margin: 0 auto; /* Centrado en móviles */
+    }
+}
