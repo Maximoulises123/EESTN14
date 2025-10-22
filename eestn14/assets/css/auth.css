@@ -1,0 +1,329 @@
+/* EEST14 Design System - Authentication Styles */
+
+/* Contenedor principal de autenticación */
+.login-container,
+.registro-container {
+    max-width: 500px;
+    margin: 60px auto;
+    padding: 40px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e9ecef;
+}
+
+/* Títulos de autenticación */
+.login-container h2,
+.registro-container h2 {
+    color: #2c3e50;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #ecf0f1;
+}
+
+/* Formularios */
+.login-container form,
+.registro-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Grupos de formulario */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    background: #fff;
+    color: #2c3e50;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #999;
+}
+
+.form-group input::placeholder {
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+/* Botones de autenticación - Coinciden con encabezado */
+.btn-login,
+.btn-registro {
+    text-decoration: none !important;
+    padding: 8px 16px !important;
+    border-radius: 4px !important;
+    font-weight: 500 !important;
+    font-size: 13px !important;
+    transition: all 0.2s ease !important;
+    white-space: nowrap !important;
+    display: inline-block !important;
+    text-align: center !important;
+    vertical-align: middle !important;
+    box-sizing: border-box !important;
+    width: 120px !important;
+    height: 32px !important;
+    line-height: 16px !important;
+    border: none !important;
+    margin: 0 !important;
+    background: #000 !important;
+    color: white !important;
+    cursor: pointer !important;
+}
+
+.btn-login:hover,
+.btn-registro:hover {
+    background: #000 !important;
+    color: white !important;
+}
+
+.btn-login:focus,
+.btn-registro:focus {
+    background: #000 !important;
+    color: white !important;
+    outline: 2px solid #000 !important;
+    outline-offset: 2px !important;
+}
+
+/* Mensajes de estado */
+.error {
+    background: #fff3cd;
+    color: #856404;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid #ffeaa7;
+    margin-bottom: 20px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.error::before {
+    content: "⚠️";
+    font-size: 1.1rem;
+}
+
+.success {
+    background: #d4edda;
+    color: #155724;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid #c3e6cb;
+    margin-bottom: 20px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.success::before {
+    content: "✅";
+    font-size: 1.1rem;
+}
+
+/* Estilos específicos para el formulario de registro */
+.registro-container {
+    max-width: 600px;
+}
+
+.registro-container .form-group {
+    margin-bottom: 15px;
+}
+
+/* Grid para campos relacionados en registro */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Estilos para selectores */
+.form-group select {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 12px center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    padding-right: 40px;
+    appearance: none;
+}
+
+/* Estados de validación */
+.form-group input:valid {
+    border-color: #ddd;
+}
+
+.form-group input:invalid:not(:placeholder-shown) {
+    border-color: #ddd;
+}
+
+/* Indicador de campo requerido */
+.form-group label::after {
+    content: " *";
+    color: #6c757d;
+    font-weight: bold;
+}
+
+/* Animaciones de entrada simplificadas */
+.login-container,
+.registro-container {
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Efectos de hover en campos */
+.form-group input:hover,
+.form-group select:hover {
+    border-color: #bbb;
+}
+
+/* Estilos para enlaces adicionales */
+.auth-links {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ecf0f1;
+}
+
+.auth-links a {
+    color: #191940;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.auth-links a:hover {
+    color: #0f0b2a;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-container,
+    .registro-container {
+        margin: 30px 20px;
+        padding: 30px 25px;
+        max-width: none;
+    }
+    
+    .login-container h2,
+    .registro-container h2 {
+        font-size: 1.7rem;
+        margin-bottom: 25px;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .form-group input,
+    .form-group select {
+        padding: 10px 14px;
+        font-size: 0.95rem;
+    }
+    
+    .btn-login,
+    .btn-registro {
+        padding: 8px 16px !important;
+        font-size: 13px !important;
+        height: 32px !important;
+        width: 120px !important;
+        line-height: 16px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container,
+    .registro-container {
+        margin: 20px 15px;
+        padding: 25px 20px;
+    }
+    
+    .login-container h2,
+    .registro-container h2 {
+        font-size: 1.5rem;
+    }
+    
+    .form-group input,
+    .form-group select {
+        padding: 8px 12px;
+    }
+    
+    .btn-login,
+    .btn-registro {
+        padding: 8px 16px !important;
+        height: 32px !important;
+        width: 120px !important;
+        line-height: 16px !important;
+    }
+}
+
+/* Estilos para el fondo de la página de autenticación */
+body {
+    background: #E0E6F0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+/* Mejoras de accesibilidad */
+.form-group input:focus-visible,
+.form-group select:focus-visible {
+    outline: 2px solid #191940;
+    outline-offset: 2px;
+}
+
+.btn-login:focus-visible,
+.btn-registro:focus-visible {
+    outline: 2px solid #191940;
+    outline-offset: 2px;
+}
+
+/* Estados de carga */
+.btn-login:disabled,
+.btn-registro:disabled {
+    background: #6c757d;
+    cursor: not-allowed;
+}
+
+.btn-login:disabled:hover,
+.btn-registro:disabled:hover {
+    background: #6c757d;
+}

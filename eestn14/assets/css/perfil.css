@@ -1,0 +1,428 @@
+/* EEST14 Design System - Perfil Moderno */
+
+/* Fondo de la página de perfil */
+body {
+    background: #E0E6F0;
+}
+
+/* Contenedor principal */
+.perfil-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    min-height: 70vh;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+/* Panel lateral izquierdo */
+.perfil-sidebar {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e9ecef;
+    height: fit-content;
+}
+
+/* Avatar */
+.avatar-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #191940;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 600;
+    position: relative;
+}
+
+.camera-icon {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: #2c3e50;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 2px solid #fff;
+}
+
+.camera-icon svg {
+    width: 14px;
+    height: 14px;
+}
+
+/* Información del usuario */
+.nombre-usuario {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.dni-usuario {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.tipo-usuario-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    background: #191940;
+    color: white;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+/* Información rápida */
+.info-rapida {
+    margin-bottom: 30px;
+}
+
+.info-item-rapida {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    color: #2c3e50;
+    font-size: 0.9rem;
+}
+
+.icono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+}
+
+.icono svg {
+    width: 16px;
+    height: 16px;
+    color: #7f8c8d;
+}
+
+/* Botón cerrar sesión */
+.btn-cerrar-sesion {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    background: #191940;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-cerrar-sesion:hover {
+    background: #2c3e50;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(25, 25, 64, 0.2);
+}
+
+/* Panel principal derecho */
+.perfil-main {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e9ecef;
+    padding: 30px;
+    overflow: hidden;
+}
+
+/* Pestañas */
+.perfil-tabs {
+    display: flex;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 15px 20px;
+    background: none;
+    border: none;
+    color: #7f8c8d;
+    font-weight: 500;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.tab-btn:hover {
+    background: #e9ecef;
+    color: #2c3e50;
+}
+
+.tab-btn.active {
+    background: #fff;
+    color: #2c3e50;
+    border-bottom-color: #191940;
+}
+
+/* Contenido de pestañas */
+.tab-content {
+    display: none;
+    padding: 30px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Headers de sección */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f8f9fa;
+}
+
+.section-header h3 {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.btn-editar {
+    padding: 8px 16px;
+    background: #191940;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-editar:hover {
+    background: #2c3e50;
+}
+
+/* Formularios */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: #2c3e50;
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    background: #f8f9fa;
+    color: #2c3e50;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #191940;
+    background: #fff;
+}
+
+.form-group input[readonly] {
+    background: #f8f9fa;
+    color: #7f8c8d;
+    cursor: not-allowed;
+}
+
+.form-group small {
+    display: block;
+    color: #7f8c8d;
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+/* Grid de accesos */
+.accesos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+/* Botones de acceso */
+.btn-acceso {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    text-align: center;
+    min-height: 60px;
+    background: #191940;
+    color: white;
+    border: 1px solid #191940;
+}
+
+.btn-acceso svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+.btn-acceso:hover {
+    background: #2c3e50;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(25, 25, 64, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .perfil-container {
+        padding-left: 20px; /* Restaura el padding normal en móviles */
+    }
+    
+    .perfil-sidebar {
+        position: static; /* Vuelve a ser estático en móviles */
+        width: auto;
+        height: auto;
+        left: auto;
+        top: auto;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .perfil-container {
+        margin: 20px auto;
+        padding: 0 15px;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .perfil-sidebar,
+    .perfil-main {
+        padding: 20px;
+    }
+    
+    .avatar {
+        width: 80px;
+        height: 80px;
+        font-size: 1.5rem;
+    }
+    
+    .camera-icon {
+        width: 25px;
+        height: 25px;
+        font-size: 0.7rem;
+    }
+    
+    .nombre-usuario {
+        font-size: 1.3rem;
+    }
+    
+    .perfil-tabs {
+        flex-direction: column;
+    }
+    
+    .tab-btn {
+        border-bottom: 1px solid #e9ecef;
+        border-right: none;
+    }
+    
+    .tab-btn.active {
+        border-bottom-color: #e9ecef;
+        border-left: 3px solid #191940;
+    }
+    
+    .tab-content {
+        padding: 20px;
+    }
+    
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .accesos-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .perfil-container {
+        margin: 15px auto;
+        padding: 0 10px;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .perfil-sidebar,
+    .perfil-main {
+        padding: 15px;
+    }
+    
+    .avatar {
+        width: 70px;
+        height: 70px;
+        font-size: 1.2rem;
+    }
+    
+    .nombre-usuario {
+        font-size: 1.2rem;
+    }
+    
+    .tab-content {
+        padding: 15px;
+    }
+    
+    .form-group input {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .btn-acceso {
+        padding: 12px 16px;
+        font-size: 0.85rem;
+        min-height: 50px;
+    }
+}

@@ -1,0 +1,486 @@
+/* EEST14 Design System - Gestionar Profesores Styles */
+
+/* Fondo de la página */
+body {
+    background: #E0E6F0;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Header del panel */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    color: #2c3e50;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #7f8c8d;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Mensajes de estado */
+.error {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 15px 20px;
+    border-radius: 8px;
+    border: 1px solid #f5c6cb;
+    margin-bottom: 30px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.success {
+    background: #d4edda;
+    color: #155724;
+    padding: 15px 20px;
+    border-radius: 8px;
+    border: 1px solid #c3e6cb;
+    margin-bottom: 30px;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Controles administrativos */
+.admin-controls {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+/* Botones */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    min-width: 140px;
+}
+
+.btn-success {
+    background: #27ae60;
+    color: white;
+}
+
+.btn-success:hover {
+    background: #229954;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(39, 174, 96, 0.2);
+}
+
+.btn-danger {
+    background: #e74c3c;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.2);
+}
+
+.btn:not(.btn-success):not(.btn-danger) {
+    background: #6c757d;
+    color: white;
+}
+
+.btn:not(.btn-success):not(.btn-danger):hover {
+    background: #5a6268;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(108, 117, 125, 0.2);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* Buscador */
+.busqueda-container {
+    margin-bottom: 30px;
+}
+
+.busqueda-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.busqueda-icon {
+    position: absolute;
+    left: 15px;
+    color: #7f8c8d;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.busqueda-input {
+    width: 100%;
+    padding: 12px 15px 12px 45px;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    background: #fff;
+    color: #2c3e50;
+    transition: all 0.3s ease;
+}
+
+.busqueda-input:focus {
+    outline: none;
+    border-color: #191940;
+    box-shadow: 0 0 0 3px rgba(25, 25, 64, 0.1);
+}
+
+.busqueda-input:focus + .busqueda-icon {
+    color: #191940;
+}
+
+.busqueda-input::placeholder {
+    color: #7f8c8d;
+}
+
+/* Tabla */
+.table {
+    width: 100%;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e9ecef;
+}
+
+.table thead {
+    background: #191940;
+    color: white;
+}
+
+.table th {
+    padding: 15px 12px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #2c3e50;
+}
+
+.table td {
+    padding: 12px;
+    border-bottom: 1px solid #f8f9fa;
+    font-size: 0.9rem;
+    color: #2c3e50;
+}
+
+.table tbody tr:hover {
+    background: #f8f9fa;
+}
+
+.table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Estados de profesor */
+.status-activo {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    background: #d4edda;
+    color: #155724;
+}
+
+.status-inactivo {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* Botones de acción en tabla */
+.table .btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    min-width: auto;
+    margin-right: 5px;
+}
+
+/* Modales */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    background: #fff;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-content h3 {
+    color: #2c3e50;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #7f8c8d;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #e74c3c;
+}
+
+/* Formularios en modales */
+.modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    color: #2c3e50;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select {
+    padding: 12px 15px;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    background: #f8f9fa;
+    color: #2c3e50;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #191940;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(25, 25, 64, 0.1);
+}
+
+.form-group input:hover,
+.form-group select:hover {
+    border-color: #bbb;
+}
+
+.form-group select {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 12px center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    padding-right: 40px;
+    appearance: none;
+}
+
+/* Botón de envío en modal */
+.modal .btn {
+    align-self: center;
+    margin-top: 10px;
+}
+
+/* Estados de validación */
+.form-group input:invalid:not(:placeholder-shown) {
+    border-color: #e74c3c;
+    background: #fdf2f2;
+}
+
+.form-group input:valid:not(:placeholder-shown) {
+    border-color: #27ae60;
+    background: #f0f9f0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .header h1 {
+        font-size: 1.6rem;
+    }
+    
+    .admin-controls {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .table {
+        font-size: 0.8rem;
+    }
+    
+    .table th,
+    .table td {
+        padding: 8px 6px;
+    }
+    
+    .table .btn {
+        padding: 4px 8px;
+        font-size: 0.7rem;
+        margin-bottom: 2px;
+    }
+    
+    .modal-content {
+        margin: 10% auto;
+        padding: 25px;
+        width: 95%;
+    }
+    
+    .modal-content h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin: 20px auto;
+        padding: 0 10px;
+    }
+    
+    .header {
+        margin-bottom: 30px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    .table th,
+    .table td {
+        padding: 6px 4px;
+        font-size: 0.75rem;
+    }
+    
+    .modal-content {
+        margin: 15% auto;
+        padding: 20px;
+    }
+    
+    .form-group input,
+    .form-group select {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.table {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Estados de carga */
+.btn:disabled {
+    background: #7f8c8d;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.btn:disabled:hover {
+    background: #7f8c8d;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Mejoras de accesibilidad */
+.form-group input:focus,
+.form-group select:focus {
+    outline: 2px solid #191940;
+    outline-offset: 2px;
+}
+
+/* Estilo para campos requeridos */
+.form-group label:has(input[required])::after,
+.form-group label:has(select[required])::after {
+    content: " *";
+    color: #e74c3c;
+    font-weight: bold;
+}

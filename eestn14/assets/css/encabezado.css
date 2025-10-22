@@ -1,0 +1,267 @@
+/* Reset optimizado */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header principal */
+header {
+    background: #fff;
+    border-bottom: none;
+    
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 90px;
+}
+
+/* Logo optimizado */
+.logo {
+    position: relative;
+    z-index: 20;
+    flex-shrink: 0;
+    margin-left: -100px;
+}
+
+.logo-img {
+    height: 70px;
+    max-width: 250px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* Navegación principal */
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+}
+
+.main-nav li {
+    position: relative;
+}
+
+.main-nav a,
+.main-nav .dropdown-trigger {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.main-nav a:hover,
+.main-nav .dropdown-trigger:hover {
+    background-color: transparent;
+}
+
+/* Dropdown optimizado */
+.main-nav .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    padding: 8px 0;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.main-nav .dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.main-nav .dropdown-menu li {
+    width: 100%;
+}
+
+.main-nav .dropdown-menu a {
+    padding: 10px 16px;
+    border-radius: 0;
+    width: 100%;
+}
+
+/* Acciones de usuario optimizadas */
+.user-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Botón perfil */
+.btn-perfil {
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 13px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    background: #000;
+    color: #fff;
+}
+
+.btn-perfil:hover {
+    background: #000;
+}
+
+.btn-perfil svg {
+    color: #fff;
+    fill: #fff;
+    stroke: #fff;
+}
+
+.btn-perfil {
+    color: #fff;
+}
+
+/* Botones de autenticación */
+.btn-registro,
+.btn-login {
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 13px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    box-sizing: border-box;
+    width: 120px;
+    height: 32px;
+    line-height: 16px;
+    border: none;
+    margin: 0;
+}
+
+/* Estados activos */
+.btn-registro:not(.inactive),
+.btn-login:not(.inactive) {
+    background: #000;
+    color: white;
+}
+
+.btn-registro:not(.inactive):hover,
+.btn-login:not(.inactive):hover {
+    background: #000;
+}
+
+/* Estados inactivos */
+.btn-registro.inactive,
+.btn-login.inactive {
+    background: #999;
+    color: #fff;
+}
+
+.btn-registro.inactive:hover,
+.btn-login.inactive:hover {
+    background: #999;
+}
+
+/* Menú móvil */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    gap: 4px;
+}
+
+.hamburger-line {
+    width: 25px;
+    height: 3px;
+    background: #000;
+    transition: all 0.2s ease;
+    border-radius: 2px;
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    .main-nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        flex-direction: column;
+        justify-content: center;
+        transition: left 0.3s ease;
+        z-index: 1000;
+    }
+    
+    .main-nav.mobile-open {
+        left: 0;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .main-nav .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        background: #999;
+        margin-top: 10px;
+    }
+    
+    .user-actions {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1001;
+    }
+    
+    .logo {
+        margin-left: 0;
+    }
+}

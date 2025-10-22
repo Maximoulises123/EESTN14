@@ -1,0 +1,469 @@
+/* EEST14 Design System - Profesor Panel Styles */
+
+/* Fondo de la página */
+body {
+    background: #E0E6F0;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Enlace de regreso */
+.back-link {
+    margin-bottom: 20px;
+}
+
+.back-link a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #7f8c8d;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.back-link a:hover {
+    color: #191940;
+}
+
+/* Tarjeta de bienvenida */
+.welcome-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e9ecef;
+    text-align: center;
+}
+
+.welcome-card h2 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.welcome-card p {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* Grid de estadísticas */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e9ecef;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.stat-number {
+    color: #191940;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    color: #7f8c8d;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* Grid del dashboard */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+/* Tarjetas del dashboard */
+.dashboard-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e9ecef;
+}
+
+.dashboard-card h3 {
+    color: #2c3e50;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f8f9fa;
+}
+
+.dashboard-card h3 .card-icon {
+    color: #191940;
+    font-size: 1.2rem;
+}
+
+/* Estado sin contenido */
+.no-content {
+    text-align: center;
+    padding: 40px 20px;
+    color: #7f8c8d;
+}
+
+.no-content p {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.no-content p:last-child {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* Items de materias */
+.materia-item {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.materia-item:hover {
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.materia-item:last-child {
+    margin-bottom: 0;
+}
+
+.materia-nombre {
+    color: #2c3e50;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.materia-info {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.materia-info strong {
+    color: #2c3e50;
+}
+
+/* Items de modelos */
+.modelo-item {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.modelo-item:hover {
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.modelo-item:last-child {
+    margin-bottom: 0;
+}
+
+.modelo-titulo {
+    color: #2c3e50;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.modelo-info {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.modelo-info strong {
+    color: #2c3e50;
+}
+
+.modelo-fecha {
+    color: #7f8c8d;
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+/* Acciones de materias */
+.materia-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Botones */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 120px;
+}
+
+.btn-primary {
+    background: #191940;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #2c3e50;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(25, 25, 64, 0.2);
+}
+
+.btn-success {
+    background: #27ae60;
+    color: white;
+}
+
+.btn-success:hover {
+    background: #229954;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(39, 174, 96, 0.2);
+}
+
+.btn-info {
+    background: #3498db;
+    color: white;
+}
+
+.btn-info:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* Acciones rápidas */
+.dashboard-card:last-child .materia-actions {
+    justify-content: center;
+    gap: 15px;
+}
+
+.dashboard-card:last-child .btn {
+    min-width: 180px;
+    padding: 12px 20px;
+    font-size: 0.95rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+    
+    .welcome-card {
+        padding: 25px;
+    }
+    
+    .welcome-card h2 {
+        font-size: 1.5rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .stat-card {
+        padding: 20px;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .dashboard-card {
+        padding: 25px;
+    }
+    
+    .dashboard-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+    
+    .materia-item,
+    .modelo-item {
+        padding: 15px;
+    }
+    
+    .materia-actions {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .dashboard-card:last-child .materia-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .dashboard-card:last-child .btn {
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin: 15px auto;
+        padding: 0 10px;
+    }
+    
+    .welcome-card {
+        padding: 20px;
+    }
+    
+    .welcome-card h2 {
+        font-size: 1.3rem;
+    }
+    
+    .welcome-card p {
+        font-size: 1rem;
+    }
+    
+    .stat-card {
+        padding: 15px;
+    }
+    
+    .stat-number {
+        font-size: 1.8rem;
+    }
+    
+    .dashboard-card {
+        padding: 20px;
+    }
+    
+    .dashboard-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+    
+    .materia-item,
+    .modelo-item {
+        padding: 12px;
+    }
+    
+    .materia-nombre,
+    .modelo-titulo {
+        font-size: 1rem;
+    }
+    
+    .materia-info,
+    .modelo-info {
+        font-size: 0.85rem;
+    }
+    
+    .btn {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dashboard-card,
+.stat-card,
+.welcome-card {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Estados de carga */
+.btn:disabled {
+    background: #7f8c8d;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.btn:disabled:hover {
+    background: #7f8c8d;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Mejoras de accesibilidad */
+.btn:focus {
+    outline: 2px solid #191940;
+    outline-offset: 2px;
+}
+
+/* Estilos para iconos SVG */
+.btn svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}

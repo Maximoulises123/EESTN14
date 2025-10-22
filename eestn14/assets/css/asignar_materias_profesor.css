@@ -1,0 +1,616 @@
+/* EEST14 Design System - Asignar Materias Profesor Styles */
+
+/* Fondo de la página */
+body {
+    background: #E0E6F0;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Enlace de regreso */
+.back-link {
+    margin-bottom: 20px;
+}
+
+.back-link a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #191940;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 16px;
+    background: #fff;
+    border-radius: 6px;
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.back-link a:hover {
+    background: #191940;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(25, 25, 64, 0.2);
+}
+
+.back-link a svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+/* Header del panel */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    color: #2c3e50;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #7f8c8d;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Mensajes de estado */
+.error {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 15px 20px;
+    border-radius: 8px;
+    border: 1px solid #f5c6cb;
+    margin-bottom: 30px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.success {
+    background: #d4edda;
+    color: #155724;
+    padding: 15px 20px;
+    border-radius: 8px;
+    border: 1px solid #c3e6cb;
+    margin-bottom: 30px;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Sección de acciones */
+.actions-section {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e9ecef;
+    margin-bottom: 40px;
+}
+
+.actions-section h3 {
+    color: #2c3e50;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.actions-section h3::before {
+    content: "•";
+    color: #191940;
+    font-weight: bold;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.actions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+.action-form {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 25px;
+    border: 1px solid #e9ecef;
+}
+
+.action-form h4 {
+    color: #191940;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Formularios */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    color: #2c3e50;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.form-group select {
+    padding: 12px 15px;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    background: #fff;
+    color: #2c3e50;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.form-group select:focus {
+    outline: none;
+    border-color: #191940;
+    box-shadow: 0 0 0 3px rgba(25, 25, 64, 0.1);
+}
+
+.form-group select:hover {
+    border-color: #bbb;
+}
+
+/* Contenedor de búsqueda */
+.search-container {
+    position: relative;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    background: #fff;
+    color: #2c3e50;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #191940;
+    box-shadow: 0 0 0 3px rgba(25, 25, 64, 0.1);
+}
+
+.search-input::placeholder {
+    color: #7f8c8d;
+}
+
+/* Botones de filtro */
+.filter-buttons {
+    display: flex;
+    gap: 8px;
+    margin: 15px 0;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 6px 12px;
+    border: 1px solid #e9ecef;
+    border-radius: 20px;
+    background: #fff;
+    color: #2c3e50;
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    border-color: #191940;
+    color: #191940;
+}
+
+.filter-btn.active {
+    background: #191940;
+    color: white;
+    border-color: #191940;
+}
+
+/* Lista de materias */
+.materias-list {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    background: #fff;
+    display: none;
+}
+
+.materia-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    border-bottom: 1px solid #f8f9fa;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.materia-option:hover {
+    background: #f8f9fa;
+}
+
+.materia-option:last-child {
+    border-bottom: none;
+}
+
+.materia-info {
+    flex: 1;
+}
+
+.materia-nombre {
+    font-weight: 500;
+    color: #2c3e50;
+    margin-bottom: 4px;
+}
+
+.materia-details {
+    font-size: 0.8rem;
+    color: #7f8c8d;
+}
+
+.materia-badges {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.badge {
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+.badge-especialidad {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.badge-tipo {
+    background: #f3e5f5;
+    color: #7b1fa2;
+}
+
+.badge-año {
+    background: #e8f5e8;
+    color: #388e3c;
+}
+
+/* Materia seleccionada */
+.materia-seleccionada {
+    padding: 12px 15px;
+    border-radius: 6px;
+    margin-top: 10px;
+    display: none;
+}
+
+.materia-seleccionada.asignar {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.materia-seleccionada.desasignar {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Botones */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    min-width: 140px;
+}
+
+.btn-success {
+    background: #27ae60;
+    color: white;
+}
+
+.btn-success:hover {
+    background: #229954;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(39, 174, 96, 0.2);
+}
+
+.btn-danger {
+    background: #e74c3c;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.2);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+/* Dashboard card */
+.dashboard-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e9ecef;
+}
+
+.dashboard-card h3 {
+    color: #2c3e50;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.dashboard-card h3::before {
+    content: "•";
+    color: #191940;
+    font-weight: bold;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+/* Tabla */
+.table {
+    width: 100%;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e9ecef;
+}
+
+.table thead {
+    background: #191940;
+    color: white;
+}
+
+.table th {
+    padding: 15px 12px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #2c3e50;
+}
+
+.table td {
+    padding: 12px;
+    border-bottom: 1px solid #f8f9fa;
+    font-size: 0.9rem;
+    color: #2c3e50;
+}
+
+.table tbody tr:hover {
+    background: #f8f9fa;
+}
+
+.table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Badges de especialidad y tipo */
+.especialidad-badge,
+.tipo-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.especialidad-programacion {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.especialidad-informatica {
+    background: #f3e5f5;
+    color: #7b1fa2;
+}
+
+.especialidad-alimentos {
+    background: #e8f5e8;
+    color: #388e3c;
+}
+
+.especialidad-ciclo-basico {
+    background: #fff3e0;
+    color: #f57c00;
+}
+
+.tipo-teorica {
+    background: #e1f5fe;
+    color: #0277bd;
+}
+
+.tipo-practica {
+    background: #f1f8e9;
+    color: #558b2f;
+}
+
+.tipo-laboratorio {
+    background: #fce4ec;
+    color: #c2185b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .header h1 {
+        font-size: 1.6rem;
+    }
+    
+    .actions-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .action-form {
+        padding: 20px;
+    }
+    
+    .filter-buttons {
+        justify-content: center;
+    }
+    
+    .materia-option {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .materia-badges {
+        align-self: flex-end;
+    }
+    
+    .table {
+        font-size: 0.8rem;
+    }
+    
+    .table th,
+    .table td {
+        padding: 8px 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin: 20px auto;
+        padding: 0 10px;
+    }
+    
+    .header {
+        margin-bottom: 30px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .actions-section,
+    .dashboard-card {
+        padding: 25px;
+    }
+    
+    .action-form {
+        padding: 15px;
+    }
+    
+    .filter-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .filter-btn {
+        text-align: center;
+    }
+    
+    .table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    .table th,
+    .table td {
+        padding: 6px 4px;
+        font-size: 0.75rem;
+    }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.actions-section,
+.dashboard-card {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Estados de carga */
+.btn:disabled {
+    background: #7f8c8d;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.btn:disabled:hover {
+    background: #7f8c8d;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Mejoras de accesibilidad */
+.form-group select:focus,
+.search-input:focus {
+    outline: 2px solid #191940;
+    outline-offset: 2px;
+}
+
+/* Estilo para campos requeridos */
+.form-group label:has(select[required])::after {
+    content: " *";
+    color: #e74c3c;
+    font-weight: bold;
+}

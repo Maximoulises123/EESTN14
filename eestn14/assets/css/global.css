@@ -1,0 +1,177 @@
+/* CSS Global - Tipografía Profesional */
+
+/* Google Fonts - Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Reset y tipografía base */
+* {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+/* Jerarquía tipográfica global */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    margin: 0 0 1rem 0;
+    color: #000000;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+
+h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+h5 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+h6 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Texto y párrafos */
+p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 0 1rem 0;
+    color: #000000;
+}
+
+/* Enlaces */
+a {
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Botones */
+button, .btn {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+}
+
+/* Inputs y formularios */
+input, textarea, select {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Texto pequeño */
+small, .small {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.4;
+}
+
+/* Texto de navegación */
+nav, .nav {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+/* Tablas */
+table {
+    font-family: 'Inter', sans-serif;
+}
+
+th {
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+
+td {
+    font-weight: 400;
+}
+
+/* Utilidades tipográficas */
+.text-bold {
+    font-weight: 700;
+}
+
+.text-semibold {
+    font-weight: 600;
+}
+
+.text-medium {
+    font-weight: 500;
+}
+
+.text-regular {
+    font-weight: 400;
+}
+
+.text-light {
+    font-weight: 300;
+}
+
+/* Tamaños de texto */
+.text-xs {
+    font-size: 0.75rem;
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}
+
+.text-base {
+    font-size: 1rem;
+}
+
+.text-lg {
+    font-size: 1.125rem;
+}
+
+.text-xl {
+    font-size: 1.25rem;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+}
+
+.text-3xl {
+    font-size: 1.875rem;
+}
+
+.text-4xl {
+    font-size: 2.25rem;
+}
+
+/* Cache buster */
+/* Global CSS - 2024 */

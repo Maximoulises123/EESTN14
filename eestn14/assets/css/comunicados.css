@@ -1,0 +1,436 @@
+/* EEST14 Design System - Comunicados Styles */
+
+/* Fondo de la página de comunicados */
+body {
+    background: #E0E6F0;
+}
+
+/* Sección de administración */
+.admin-section {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-admin {
+    background: #191940;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn-admin:hover {
+    background: #2c3e50;
+}
+
+/* Sección del buscador */
+.buscador-section {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.buscador-form {
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e9ecef;
+    margin-bottom: 20px;
+}
+
+.buscador-grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+    align-items: end;
+}
+
+.buscador-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.buscador-item input {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    background: #fff;
+    color: #2c3e50;
+}
+
+.buscador-item input:focus {
+    outline: none;
+    border-color: #999;
+}
+
+.buscador-botones {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-buscar,
+.btn-limpiar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-buscar {
+    background: #191940;
+    color: white;
+}
+
+.btn-buscar:hover {
+    background: #2c3e50;
+}
+
+.btn-limpiar {
+    background: #6c757d;
+    color: white;
+}
+
+.btn-limpiar:hover {
+    background: #5a6268;
+}
+
+.btn-icon {
+    width: 16px;
+    height: 16px;
+}
+
+/* Resultados de búsqueda */
+.resultados-busqueda {
+    background: #f8f9fa;
+    padding: 15px 20px;
+    border-radius: 6px;
+    border: 1px solid #e9ecef;
+    margin-bottom: 20px;
+}
+
+.resultados-busqueda p {
+    margin: 0 0 10px 0;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.filtro-activo {
+    background: #191940;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.total-resultados {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Estados vacíos */
+.sin-resultados,
+.sin-comunicados {
+    text-align: center;
+    padding: 60px 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e9ecef;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.sin-resultados h3,
+.sin-comunicados h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.sin-resultados p,
+.sin-comunicados p {
+    color: #7f8c8d;
+    margin-bottom: 10px;
+}
+
+.sin-resultados a {
+    color: #191940;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.sin-resultados a:hover {
+    text-decoration: underline;
+}
+
+/* Contenedor de comunicados */
+.comunicados-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+}
+
+/* Tarjeta de comunicado */
+.comunicado-item {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e9ecef;
+    transition: box-shadow 0.3s ease;
+}
+
+.comunicado-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagen del comunicado */
+.comunicado-imagen {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.comunicado-imagen-placeholder {
+    width: 100%;
+    height: 200px;
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.placeholder-content {
+    text-align: center;
+    color: #6c757d;
+}
+
+.placeholder-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 10px;
+    color: #dee2e6;
+}
+
+.placeholder-content p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+/* Header del comunicado */
+.comunicado-header {
+    padding: 20px;
+}
+
+.titulo-fecha h3 {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.fecha {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+/* Badge de importancia */
+.importancia-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.importancia-badge:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.importancia-alta {
+    background: #e74c3c;
+    color: white;
+}
+
+.importancia-media {
+    background: #f39c12;
+    color: white;
+}
+
+.importancia-baja {
+    background: #27ae60;
+    color: white;
+}
+
+/* Contenido del comunicado */
+.comunicado-content {
+    padding: 0 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.comunicado-descripcion {
+    color: #7f8c8d;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 7em; /* 5 líneas * 1.4 line-height */
+    flex: 1;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+.comunicado-ver-mas {
+    align-self: flex-end;
+    color: #191940;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-top: auto;
+    margin-left: auto;
+}
+
+.comunicado-ver-mas:hover {
+    text-decoration: underline;
+}
+
+/* Información adicional */
+.comunicado-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.comunicado-numero {
+    font-weight: 600;
+}
+
+.comunicado-fecha-completa {
+    font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .admin-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .buscador-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .buscador-botones {
+        justify-content: stretch;
+    }
+    
+    .btn-buscar,
+    .btn-limpiar {
+        flex: 1;
+        justify-content: center;
+    }
+    
+    .comunicados-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .comunicado-header {
+        padding: 15px;
+    }
+    
+    .comunicado-content {
+        padding: 0 15px 15px 15px;
+    }
+    
+    .comunicado-info {
+        padding: 12px 15px;
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .buscador-section,
+    .comunicados-container {
+        padding: 0 15px;
+    }
+    
+    .buscador-form {
+        padding: 20px;
+    }
+    
+    .sin-resultados,
+    .sin-comunicados {
+        margin: 20px 15px;
+        padding: 40px 15px;
+    }
+    
+    .sin-resultados h3,
+    .sin-comunicados h3 {
+        font-size: 1.3rem;
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .titulo-fecha h3 {
+        font-size: 1.1rem;
+    }
+    
+    .comunicado-imagen,
+    .comunicado-imagen-placeholder {
+        height: 150px;
+    }
+}

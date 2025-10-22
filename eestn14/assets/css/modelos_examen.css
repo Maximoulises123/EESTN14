@@ -1,0 +1,446 @@
+/* EEST14 Design System - Modelos de Examen Styles */
+
+/* Fondo de la página */
+body {
+    background: #E0E6F0;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    color: #2c3e50;
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* Filtros */
+.filters {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e9ecef;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.filter-group label {
+    color: #2c3e50;
+    font-weight: 500;
+    font-size: 0.95rem;
+    white-space: nowrap;
+}
+
+.filter-group select {
+    padding: 10px 15px;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    background: #f8f9fa;
+    color: #2c3e50;
+    transition: all 0.3s ease;
+    min-width: 200px;
+}
+
+.filter-group select:focus {
+    outline: none;
+    border-color: #191940;
+    box-shadow: 0 0 0 3px rgba(25, 25, 64, 0.1);
+    background: #fff;
+}
+
+/* Estado sin modelos */
+.no-models {
+    background: #fff;
+    border-radius: 12px;
+    padding: 60px 40px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e9ecef;
+}
+
+.no-models h3 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.no-models p {
+    color: #7f8c8d;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Tarjetas de modelos */
+.model-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.model-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Header del modelo */
+.model-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f8f9fa;
+}
+
+.model-title {
+    color: #2c3e50;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0;
+    flex: 1;
+    margin-right: 20px;
+}
+
+.model-date {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    font-weight: 500;
+    white-space: nowrap;
+    background: #f8f9fa;
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 1px solid #e9ecef;
+}
+
+/* Información del modelo */
+.model-info {
+    margin-bottom: 20px;
+}
+
+.model-info p {
+    color: #7f8c8d;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.model-info p:last-child {
+    margin-bottom: 0;
+}
+
+.model-info strong {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+/* Badge de especialidad */
+.especialidad-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-left: 8px;
+}
+
+.especialidad-programacion {
+    background: #e3f2fd;
+    color: #1976d2;
+    border: 1px solid #bbdefb;
+}
+
+.especialidad-informatica {
+    background: #f3e5f5;
+    color: #7b1fa2;
+    border: 1px solid #e1bee7;
+}
+
+.especialidad-alimentos {
+    background: #e8f5e8;
+    color: #388e3c;
+    border: 1px solid #c8e6c9;
+}
+
+.especialidad-ciclo-basico {
+    background: #fff3e0;
+    color: #f57c00;
+    border: 1px solid #ffcc02;
+}
+
+/* Descripción del modelo */
+.model-description {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #e9ecef;
+}
+
+.model-description strong {
+    color: #2c3e50;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.model-description {
+    color: #7f8c8d;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Acciones del modelo */
+.model-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+/* Botones */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 180px;
+}
+
+.btn-success {
+    background: #191940;
+    color: white;
+}
+
+.btn-success:hover {
+    background: #2c3e50;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(25, 25, 64, 0.2);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+    
+    .header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .filters {
+        padding: 20px;
+    }
+    
+    .filter-group {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+    
+    .filter-group select {
+        min-width: auto;
+        width: 100%;
+    }
+    
+    .model-card {
+        padding: 25px;
+    }
+    
+    .model-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+    
+    .model-title {
+        margin-right: 0;
+        font-size: 1.2rem;
+    }
+    
+    .model-date {
+        align-self: flex-start;
+    }
+    
+    .model-actions {
+        justify-content: center;
+    }
+    
+    .btn {
+        width: 100%;
+        min-width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin: 15px auto;
+        padding: 0 10px;
+    }
+    
+    .header h1 {
+        font-size: 1.6rem;
+    }
+    
+    .header p {
+        font-size: 1rem;
+    }
+    
+    .filters {
+        padding: 15px;
+    }
+    
+    .no-models {
+        padding: 40px 20px;
+    }
+    
+    .no-models h3 {
+        font-size: 1.3rem;
+    }
+    
+    .model-card {
+        padding: 20px;
+    }
+    
+    .model-title {
+        font-size: 1.1rem;
+    }
+    
+    .model-date {
+        font-size: 0.85rem;
+        padding: 5px 10px;
+    }
+    
+    .model-info p {
+        font-size: 0.9rem;
+    }
+    
+    .model-description {
+        padding: 15px;
+    }
+    
+    .model-description {
+        font-size: 0.9rem;
+    }
+    
+    .btn {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.model-card {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Estados de carga */
+.btn:disabled {
+    background: #7f8c8d;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.btn:disabled:hover {
+    background: #7f8c8d;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Mejoras de accesibilidad */
+.btn:focus {
+    outline: 2px solid #191940;
+    outline-offset: 2px;
+}
+
+.filter-group select:focus {
+    outline: 2px solid #191940;
+    outline-offset: 2px;
+}
+
+/* Estilos para enlaces externos */
+.model-actions a[target="_blank"] {
+    position: relative;
+}
+
+.model-actions a[target="_blank"]:after {
+    content: "↗";
+    margin-left: 5px;
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+/* Hover effects mejorados */
+.model-card:hover .model-title {
+    color: #191940;
+}
+
+.model-card:hover .especialidad-badge {
+    transform: scale(1.05);
+}
+
+/* Transiciones suaves */
+* {
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
